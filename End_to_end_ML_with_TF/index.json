@@ -3,7 +3,7 @@
   "description": "Series of labs to deploy ML models from scratch to production",
   "details": {
     "steps": [
-      { "title": "Title", "text": "step1.md" },
+      { "title": "Clone Google git project", "text": "step1.md" },
       { "title": "Goes", "text": "step2.md" },
       { "title": "Here", "text": "step3.md" }
     ],
@@ -13,14 +13,6 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "client": [
-        {
-          "file": "courseBase.sh",
-          "target": "~/"
-        }
-      ]
     }
   },
   "environment": {
@@ -29,6 +21,6 @@
     "dashboards": [{"name": "Jupyter", "port": 8888}]
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "ubuntu"
   }
 }
