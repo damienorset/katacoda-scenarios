@@ -2,6 +2,9 @@
   "title": "End to end ML with TensorFlow",
   "description": "Series of labs to deploy ML models from scratch to production",
   "details": {
+    "intro": {
+	  "courseData": "courseBase.sh",
+    },
     "steps": [
       {
         "title": "Step 1",
