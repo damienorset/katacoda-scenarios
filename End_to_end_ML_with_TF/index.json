@@ -3,7 +3,7 @@
   "description": "Series of labs to deploy ML models from scratch to production",
   "details": {
     "intro": {
-	  "courseData": "courseBase.sh",
+	  "courseData": "courseBase.sh"
     },
     "steps": [
       {
