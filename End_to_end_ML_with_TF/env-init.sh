@@ -1,6 +1,2 @@
 #/bin/bash
-touch /root/test.123
-git clone https://github.com/GoogleCloudPlatform/training-data-analyst.git
-cd training-data-analyst/courses/machine_learning/deepdive/06_structured
-apt -y install python3-pip
-pip3 install jupyter
+wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.3.1/swagger-codegen-cli-2.3.1.jar -O swagger-codegen-cli.jar
