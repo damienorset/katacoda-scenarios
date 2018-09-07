@@ -11,6 +11,6 @@
 `jupyter notebook --allow-root`{{execute}}
 
 ouvrir le jupyter hub
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/pets
+https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/
 
 
