@@ -22,6 +22,14 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+	"assets": {
+      "client": [
+        {
+          "file": "courseBase.sh",
+          "target": "~/"
+        }
+      ]
     }
   },
   "environment": {
