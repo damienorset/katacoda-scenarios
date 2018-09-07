@@ -24,7 +24,9 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+	"showdashboard": true,
+    "dashboards": [{"name": "Jupyter", "port": 8888}],
   },
   "backend": {
     "imageid": "ubuntu"
