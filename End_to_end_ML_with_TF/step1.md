@@ -4,8 +4,8 @@ Cloner le repo Google
 Installer Python3
 `apt -y install python3-pip`{{execute}}
 
-Installer Jupyter
-`pip3 install jupyter`{{execute}}
+Installer les différents packages python nécéssaires
+`pip3 install jupyter pandas datalab`{{execute}}
 
 Configurer Jupyter et lui créer un mdp
 `jupyter notebook --generate-config`{{execute}}
@@ -16,5 +16,4 @@ Lancer Jupyter
 
 Ouvrir le Jupyter hub
 https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/
-
 
