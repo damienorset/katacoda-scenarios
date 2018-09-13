@@ -1,9 +1,9 @@
-Créer des crédentials Google
-`mkdir /root/.config`{{execute}}
-`mkdir /root/.config/gcloud`{{execute}}
-`touch /root/.config/gcloud/config.json`{{execute}}
+1. Créer des crédentials Google
++ `mkdir /root/.config`{{execute}}
++ `mkdir /root/.config/gcloud`{{execute}}
++ `touch /root/.config/gcloud/config.json`{{execute}}
 
-Ouvrer dans l'éditeur graphique de katacoda le fichier config.json créé et cliquez sur "Copy to editor"
+2. Ouvrer dans l'éditeur graphique de katacoda le fichier config.json créé et cliquez sur "Copy to editor"
 <pre class="file" data-filename="config.json" data-target="replace">
 {
   "type": "service_account",
@@ -19,7 +19,6 @@ Ouvrer dans l'éditeur graphique de katacoda le fichier config.json créé et cl
 }
 </pre>
 
-
-Ajouter la variable ci dessous dans une cellule jupyter
+3. Ajouter la variable ci dessous dans une cellule jupyter
 import os
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/root/.config/gcloud/config.json"
