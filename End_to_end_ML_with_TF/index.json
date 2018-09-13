@@ -29,6 +29,6 @@
     "dashboards": [{"name": "Jupyter", "port": 8888}]
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "python"
   }
 }
