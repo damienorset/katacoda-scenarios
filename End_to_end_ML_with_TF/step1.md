@@ -12,7 +12,7 @@ Configurer Jupyter et lui créer un mdp
 `jupyter notebook password`{{execute}}
 
 Lancer Jupyter
-`jupyter notebook --allow-root --ip 0.0.0.0`{{execute}}
+`jupyter notebook --allow-root --ip 0.0.0.0 --no-browser`{{execute}}
 
 Ouvrir le Jupyter hub
 https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/
