@@ -19,6 +19,11 @@
 }
 </pre>
 
-+ Ajouter la variable ci dessous dans une cellule jupyter
-import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/root/.config/gcloud/config.json"
++ Ajouter la variable d'environnement 
+`export GOOGLE_APPLICATION_CREDENTIALS=/root/.config/gcloud/config.json`{{execute}}
+
++ Lancer Jupyter
+`jupyter notebook --allow-root --ip 0.0.0.0 --no-browser`{{execute}}
+
++ Ouvrir le Jupyter hub
+https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com/
