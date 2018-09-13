@@ -2,15 +2,23 @@
   "title": "End to end ML with TensorFlow",
   "description": "Series of labs to deploy ML models from scratch to production",
   "details": {
+    "assets": {
+      "client": [
+      {
+        "file": "init_environment.sh",
+        "target": "~/"
+      }
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "courseData": "env-init.sh"
+    },
     "steps": [
       { "title": "Clone Google git project", "text": "step1.md" },
       { "title": "Goes", "text": "step2.md" },
       { "title": "Here", "text": "step3.md" }
     ],
-    "intro": {
-      "text": "intro.md",
-      "courseData": "env-init.sh"
-    },
     "finish": {
       "text": "finish.md"
     }
