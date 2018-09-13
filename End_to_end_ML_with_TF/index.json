@@ -15,8 +15,8 @@
       "courseData": "env-init.sh"
     },
     "steps": [
-      { "title": "Clone Google git project", "text": "step1.md" },
-      { "title": "Goes", "text": "step2.md" },
+      { "title": "Setup the project", "text": "step1.md" },
+      { "title": "Create credentials and launch Jupyter", "text": "step2.md" },
       { "title": "Here", "text": "step3.md" }
     ],
     "finish": {
