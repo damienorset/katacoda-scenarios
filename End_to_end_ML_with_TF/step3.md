@@ -1,3 +1,3 @@
-+ Indices lors des labs
-1. pour executer du bash, commencer la cellule par %%bash
-2. Pour tomber sur la UI de tensorboard, notez le port utilisé et remplacez le manuellement dans l'url https://xxxxxxxxx-[PORT]-xxxxxxxx.environments.katacoda.com
++ Hints for the labs
+1. To execute bash code into a jupyter cell, begin the cell with "%%bash"
+2. To reach tensorboard UI once you've started it, note the dynamic port used and remplace it into the url https://xxxxxxxxx-[PORT]-xxxxxxxx.environments.katacoda.com
