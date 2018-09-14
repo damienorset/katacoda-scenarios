@@ -22,6 +22,12 @@
 + Ajouter la variable d'environnement 
 `export GOOGLE_APPLICATION_CREDENTIALS=/root/.config/gcloud/config.json`{{execute}}
 
++ Cloner le repo d'entrainement Google 
+`git clone https://github.com/GoogleCloudPlatform/training-data-analyst.git`{{execute}}
+
++ Se déplacer au bon endroit dans le repo
+`cd training-data-analyst/courses/machine_learning/deepdive/`{{execute}}
+
 + Lancer Jupyter
 `jupyter notebook --allow-root --ip 0.0.0.0 --no-browser`{{execute}}
 
