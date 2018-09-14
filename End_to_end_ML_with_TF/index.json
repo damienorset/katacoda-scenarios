@@ -1,6 +1,8 @@
 {
   "title": "End to end ML with TensorFlow",
   "description": "Series of labs to deploy ML models from scratch to production",
+  "time": "1 hour per lab",
+  "difficulty": "medium",
   "details": {
     "assets": {
       "client": [
@@ -17,7 +19,7 @@
     "steps": [
       { "title": "Setup the project", "text": "step1.md" },
       { "title": "Create credentials and launch Jupyter", "text": "step2.md" },
-      { "title": "Here", "text": "step3.md" }
+      { "title": "DO the labs", "text": "step3.md" }
     ],
     "finish": {
       "text": "finish.md"
