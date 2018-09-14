@@ -2,10 +2,7 @@
 `apt -y install python3-pip`{{execute}}
 
 + Installer les différents packages python nécéssaires
-`pip3 install jupyter pandas datalab`{{execute}}
-
-+ Cloner le repo Google 
-`git clone https://github.com/GoogleCloudPlatform/training-data-analyst.git`{{execute}}
+`pip3 install jupyter pandas datalab tensorflow==1.5.0`{{execute}}
 
 + Configurer Jupyter et lui créer un mdp
 1. `jupyter notebook --generate-config`{{execute}}
