@@ -5,10 +5,16 @@
 
 + Manually by putting https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/ in the docker-compose file
 
-+ Or automatically `sed -i "s,spline.consumer.url: 'http://localhost:9090/consumer',spline.consumer.url: 'https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/',g" docker-compose.yml`{{execute}}
++ Or automatically `sed -i "s,spline.consumer.url: 'http://localhost:9090/consumer',spline.consumer.url: 'http://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/consumer',g" docker-compose.yml`{{execute}}
+
 
 3. Start spline container
 `docker-compose up`{{execute}}
 Verify that the product is well launch by going on the following url : https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
-If there's an error Ctrl+C to stop the containers and `docker-compose up`{{execute}} to relaunch the stack.
++ If there's an error Ctrl+C and `docker-compose down`{{execute}} to stop and remove all the containers 
++ Then start service by service :
+  + `docker-compose up arangodb`{{execute}}
+  + `docker-compose up spline`{{execute}}
+  + `docker-compose up ui`{{execute}}
++ And verify in https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
