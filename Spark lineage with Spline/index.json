@@ -24,6 +24,13 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "SparkAppMain.java", "target": "/tmp"},
+            {"file": "spline.properties", "target": "/tmp"},
+            {"file": "pom.xml", "target": "/tmp"}
+        ]
     }
   },
   "environment": {
