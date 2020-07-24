@@ -1,23 +1,25 @@
 {
-  "title": "First Test Scenario with KC",
-  "description": "Just a quick test of this awesome training platform",
+  "title": "Spark lineage with Spline",
+  "description": "Use Spline to follow data lineage in spark jobs",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Setup Spline",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Create Spark Job",
+        "courseData": "step2-background.sh",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Launch job and verify lineage in Spline",
         "text": "step3.md"
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "env-init.sh"
     },
     "finish": {
       "text": "finish.md"
