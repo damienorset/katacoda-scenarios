@@ -33,7 +33,11 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "terminals": [
+        {"name": "T1", "target": "host01"},
+        {"name": "T2", "target": "host01"}
+    ]
   },
   "backend": {
     "imageid": "ubuntu"
