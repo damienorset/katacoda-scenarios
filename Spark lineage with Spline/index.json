@@ -10,6 +10,7 @@
       {
         "title": "Create Spark Job",
         "courseData": "step2-background.sh",
+        "code": "step2-background.sh",
         "text": "step2.md"
       },
       {
