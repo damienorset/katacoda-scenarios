@@ -8,7 +8,7 @@ In a new terminal tab
 `tar xzf spark-2.4.6-bin-hadoop2.6.tgz`{{execute T2}}
 
 2. Verify the java project structure under "porject" folder
-
-
+3. cd project
+4. mvn clean install
 
 

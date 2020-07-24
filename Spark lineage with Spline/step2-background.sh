@@ -2,6 +2,8 @@
 sed -i 's/java-11/java-8/g' /etc/environment
 source /etc/environment
 
+wget --directory-prefix=/tmp/ https://www.datasciencebytes.com/data/nationalparks.csv
+
 mkdir project
 mkdir project/src
 mkdir project/src/main
