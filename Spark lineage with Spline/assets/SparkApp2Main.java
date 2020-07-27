@@ -11,13 +11,13 @@ import static org.apache.spark.sql.functions.sum;
 import org.apache.spark.sql.SaveMode;
 import za.co.absa.spline.harvester.SparkLineageInitializer;
 
-public class SparkAppMain {
+public class SparkApp2Main {
     public static String SPACE_DELIMITER = ",";
 
     public static void main(String[] args) throws IOException {
         SparkSession spark = SparkSession.builder()
             .master("local[*]")
-            .appName("Lab")
+            .appName("Job2")
             .getOrCreate();
         
         // activate Spline Lineage
@@ -27,13 +27,13 @@ public class SparkAppMain {
         spark.read()
             .option("header", "true")
             .option("inferSchema", "true")
-            .csv("/tmp/nationalparks.csv")
+            .csv("/root/project/nationalparks_copy.csv")
             .as("source")
             .coalesce(1)
             .write()
             .mode(SaveMode.Overwrite)
-            .csv("/root/project/nationalparks_copy.csv");
-        System.out.println("########################### Copying - output file created /root/project/nationalparks_copy.csv");
+            .csv("/root/project2/nationalparks_copy.csv");
+        System.out.println("########################### Copying - output file created /root/project2/nationalparks_copy.csv");
 
         StructType schema = new StructType()
             .add("Name", "string")
@@ -46,21 +46,15 @@ public class SparkAppMain {
             .option("header", "true")
             //.option("inferSchema", "true")
             .schema(schema)
-            .csv("/tmp/nationalparks.csv");
+            .csv("/root/project/utah_parks.csv");
         System.out.println("########################### Input file : " + df.count() + " lines");
             
-        Dataset<Row> utah = df.filter("Location = 'Utah'");
-        System.out.println("########################### Number of parks in Utah = " + utah.count());
-        utah.coalesce(1).write()
-            .mode(SaveMode.Overwrite)
-            .csv("/root/project/utah_parks.csv"); 
-        
         Dataset<Row> dfResult = df.groupBy("Location")
             .agg(sum("Area"), count("Location"));
 
         dfResult.coalesce(1).write()
             .mode(SaveMode.Overwrite)
-            .csv("/root/project/agg_parks.csv"); 
-        System.out.println("########################### Parks agregated in /root/project/agg_parks.csv");
+            .csv("/root/project2/agg_parks_utah.csv"); 
+        System.out.println("########################### Parks agregated in /root/project/agg_parks_utah.csv");
     }
 }

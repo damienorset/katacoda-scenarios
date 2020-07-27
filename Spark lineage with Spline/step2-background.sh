@@ -10,8 +10,8 @@ mkdir project/src/main
 mkdir project/src/main/java
 mkdir project/src/main/resources
 
-mv /tmp/pom.xml project/pom.xml
-mv /tmp/SparkAppMain.java project/src/main/java/SparkAppMain.java
-mv /tmp/spline.properties project/src/main/resources/spline.properties
+cp /tmp/pom.xml project/pom.xml
+cp /tmp/SparkAppMain.java project/src/main/java/SparkAppMain.java
+cp /tmp/spline.properties project/src/main/resources/spline.properties
 
 sed -i 's,###,https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/producer,g' project/src/main/resources/spline.properties
