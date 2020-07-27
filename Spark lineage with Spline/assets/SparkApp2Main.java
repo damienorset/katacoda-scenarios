@@ -32,8 +32,8 @@ public class SparkApp2Main {
             .coalesce(1)
             .write()
             .mode(SaveMode.Overwrite)
-            .csv("/root/project2/nationalparks_copy.csv");
-        System.out.println("########################### Copying - output file created /root/project2/nationalparks_copy.csv");
+            .csv("/root/project2/nationalparks_copy2.csv");
+        System.out.println("########################### Copying - output file created /root/project2/nationalparks_copy2.csv");
 
         StructType schema = new StructType()
             .add("Name", "string")

@@ -17,7 +17,7 @@ public class SparkAppMain {
     public static void main(String[] args) throws IOException {
         SparkSession spark = SparkSession.builder()
             .master("local[*]")
-            .appName("Lab")
+            .appName("Job1")
             .getOrCreate();
         
         // activate Spline Lineage
