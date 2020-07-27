@@ -7,7 +7,7 @@ We'll start a spline server, with arrangoDB as the storage backend and the splin
 + Manually by putting `https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/`{{copy}} in the docker-compose file
 + Or automatically `sed -i "s,spline.consumer.url: 'http://localhost:9090/consumer',spline.consumer.url: 'https://[[HOST_SUBDOMAIN]]-9090-[[KATACODA_HOST]].environments.katacoda.com/consumer',g" docker-compose.yml`{{execute T1}}
 
-1. Start spline container with `docker-compose up`{{execute T1}}
+3. Start spline container with `docker-compose up`{{execute T1}}
 It takes 1 minute.
 Verify that the product is well launch by going on the following url : https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 + If there's an error Ctrl+C and `docker-compose down`{{execute T1}} to stop and remove all the containers 
