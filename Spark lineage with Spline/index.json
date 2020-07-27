@@ -18,7 +18,8 @@
       },
       {
         "title": "Extend lineage with second job",
-        "text": "step4.md"
+        "text": "step4.md",
+        "code": "step4-background.sh"
       }
     ],
     "intro": {
