@@ -28,37 +28,43 @@ public class SparkAppMain {
         JavaRDD<String> stringJavaRDD = sparkContext.textFile("/tmp/nationalparks.csv");
         System.out.println("########################### Number of lines in file = " + stringJavaRDD.count());*/
 
+        System.out.println("########################### Copying data from source to target");
         spark.read()
             .option("header", "true")
             .option("inferSchema", "true")
             .csv("/tmp/nationalparks.csv")
             .as("source")
+            .coalesce(1)
             .write()
             .mode(SaveMode.Overwrite)
             .csv("/tmp/java-sample.csv");
-        System.out.println("########################### file created /tmp/java-sample.csv");
+        System.out.println("########################### Copying - output file created /tmp/java-sample.csv");
 
-        //JavaRDD<String> inputRDD = spark.read().flatMap(s -> Arrays.asList(s.split(SPACE_DELIMITER)).iterator());
         StructType schema = new StructType()
             .add("Name", "string")
             .add("Location", "string")
             .add("Year", "int")
-            .add("Area", "long");
-            
+            .add("Area", "double");
+        
+        System.out.println("########################### Reading input file");
         Dataset<Row> df = spark.read()
             .option("header", "true")
             //.option("inferSchema", "true")
             .schema(schema)
             .csv("/tmp/nationalparks.csv");
+        System.out.println("########################### Input file : " + df.count() + " lines");
             
-        //Dataset<Row> utah = df.filter(s -> s.contains("Utah"));
-        //System.out.println("########################### Number of parks in Utah = " + utahRDD.count());
+        Dataset<Row> utah = df.filter("Location = 'Utah'");
+        System.out.println("########################### Number of parks in Utah = " + utah.count());
+        df.coalesce(1).write()
+            .mode(SaveMode.Overwrite)
+            .csv("/tmp/utah_parks.csv"); 
         
         Dataset<Row> dfResult = df.groupBy("Location")
-            .agg(sum("Area"), count("Name"));
-        System.out.println("########################### Result = " + dfResult);
+            .agg(sum("Area"), count("Location"));
+        System.out.println("########################### Parks agregated in /tmp/agg_parks.csv");
 
-        dfResult.write()
+        dfResult.coalesce(1).write()
             .mode(SaveMode.Overwrite)
             .csv("/tmp/agg_parks.csv"); 
     }
