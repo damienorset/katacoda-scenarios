@@ -55,6 +55,6 @@ public class SparkApp2Main {
         dfResult.coalesce(1).write()
             .mode(SaveMode.Overwrite)
             .csv("/root/project2/agg_parks_utah.csv"); 
-        System.out.println("########################### Parks agregated in /root/project/agg_parks_utah.csv");
+        System.out.println("########################### Parks agregated in /root/project2/agg_parks_utah.csv");
     }
 }
